@@ -1,4 +1,6 @@
-package SRC;
+package src;
+
+import java.util.Scanner;
 
 public class Average {
     public static void main(String[] args) {
@@ -8,7 +10,12 @@ public class Average {
         int j = 0;
         int n = 0;
 
-        for (int i = 5; i <= 20; i++) {
+        System.out.println("Введите начальное значение: ");
+        int start = new Scanner(System.in).nextInt();
+        System.out.println("Введите конечное значение: ");
+        int finish = new Scanner(System.in).nextInt();
+
+        for (int i = start; i <= finish; i++) {
             sum = sum + i;
             j++;
             if (i % 2 == 0) {
@@ -16,11 +23,9 @@ public class Average {
                 n++;
             }
         }
-        System.out.println("Сумма всех чисел = " + sum);
-        System.out.println("Среднее арифметическое всех чисел = " + ((double) sum / j));
+        System.out.println("Сумма чисел = " + sum);
+        System.out.println("Среднее арифметическое чисел = " + ((double) sum / j));
         System.out.println("Сумма четных чисел = " + sumChet);
         System.out.println("Среднее арифметическое четных чисел = " + ((double) sumChet / n));
-
     }
 }
-

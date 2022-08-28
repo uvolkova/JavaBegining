@@ -1,4 +1,4 @@
-package SRC.OOP;
+package src.oop;
 
 import java.util.Scanner;
 
@@ -22,10 +22,11 @@ public class Main_Person {
 
         person.setName("");
         person.setFamilyName("Mask");
+        person.setAge(56);
 
 
         System.out.println("Объект класса Person был создан: " + person);
-        person.printAge();
+        person.calculateYearOfBirth();
     }
 }
 

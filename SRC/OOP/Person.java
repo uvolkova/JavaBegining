@@ -1,4 +1,4 @@
-package SRC.OOP;
+package src.oop;
 
 public class Person {
     private String name;
@@ -52,8 +52,9 @@ public class Person {
         return "{" + familyName + " " + name + " " + middleName + "}";
     }
 
-    public void printAge() {
-        System.out.println("Age = " + age);
+    void calculateYearOfBirth() {
+        int yearOfBirth = 2022 - age;
+        System.out.println("Год рождения: " + yearOfBirth);
     }
 }
 

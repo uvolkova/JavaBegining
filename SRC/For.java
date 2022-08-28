@@ -1,9 +1,8 @@
-package SRC;
+package src;
 
 public class For {
     public static void main(String[] args) {
         for (int i = 100; i >= 1; i--) {
-            boolean d = getDel(i);
             if (getDel(i))
                 System.out.println(i);
         }
