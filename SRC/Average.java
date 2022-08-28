@@ -15,17 +15,29 @@ public class Average {
         System.out.println("Введите конечное значение: ");
         int finish = new Scanner(System.in).nextInt();
 
-        for (int i = start; i <= finish; i++) {
-            sum = sum + i;
-            j++;
-            if (i % 2 == 0) {
-                sumChet = sumChet + i;
-                n++;
+        if (start < finish) {
+            for (int i = start; i <= finish; i++) {
+                sum = sum + i;
+                j++;
+                if (i % 2 == 0) {
+                    sumChet = sumChet + i;
+                    n++;
+                }
+            }
+        } else {
+            for (int i = finish; i <= start; i++) {
+                sum = sum + i;
+                j++;
+                if (i % 2 == 0) {
+                    sumChet = sumChet + i;
+                    n++;
+                }
             }
         }
         System.out.println("Сумма чисел = " + sum);
         System.out.println("Среднее арифметическое чисел = " + ((double) sum / j));
         System.out.println("Сумма четных чисел = " + sumChet);
         System.out.println("Среднее арифметическое четных чисел = " + ((double) sumChet / n));
+
     }
 }

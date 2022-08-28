@@ -1,5 +1,7 @@
 package src.oop;
 
+import java.time.YearMonth;
+
 public class Person {
     private String name;
     private String middleName;
@@ -49,12 +51,14 @@ public class Person {
 
     @Override
     public String toString() {
-        return "{" + familyName + " " + name + " " + middleName + "}";
+        return "{" + familyName + " " + name + " " + middleName + "; " + age +"лет"+"}";
     }
 
-    void calculateYearOfBirth() {
-        int yearOfBirth = 2022 - age;
-        System.out.println("Год рождения: " + yearOfBirth);
+    int yearNow = YearMonth.now().getYear();
+
+    int calculateYearOfBirth() {
+        return yearNow - age;
     }
 }
+
 
