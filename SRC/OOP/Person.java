@@ -51,13 +51,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "{" + familyName + " " + name + " " + middleName + "; " + age +"лет"+"}";
+        return "{" + familyName + " " + name + " " + middleName + "; " + age + "лет" + "}";
     }
 
-    int yearNow = YearMonth.now().getYear();
-
-    int calculateYearOfBirth() {
-        return yearNow - age;
+    public int calculateYearOfBirth() {
+        return YearMonth.now().getYear() - age;
     }
 }
 
